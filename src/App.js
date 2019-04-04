@@ -4,6 +4,8 @@ import './App.css';
 import NextBlock from './components/next-block'
 import GridBoard from './components/grid-board'
 import ScoreBoard from './components/score-board'
+import Controls from './components/controls'
+
 
 
 class App extends Component {
@@ -16,6 +18,7 @@ class App extends Component {
         <GridBoard />
         <NextBlock />
         <ScoreBoard />
+        <Controls />
       </div>
     );
   }
