@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { combineReducers } from 'redux'
-import gameReducer from './game-reducer'
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
