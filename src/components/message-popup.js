@@ -19,8 +19,7 @@ class MessagePopup extends Component {
     }
     return (
       <div className={`message-popup ${isHidden}`}>
-        <h1>Message Title</h1>
-        <p>Message info...</p>
+        <h1>{message}</h1>
       </div>
     )
   }
