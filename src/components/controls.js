@@ -5,8 +5,34 @@ import { moveDown, moveLeft, moveRight, rotate, } from '../actions'
 
 
 class Controls extends Component {
+
+  move = (e) => {
+    const key = e.keyCode
+    console.log(key)
+    if(key === 37){
+
+        this.props.moveLeft()
+    }
+    else if (key === 38){
+      this.props.rotate()
+    }
+    else if (key === 39){
+      this.props.moveRight()
+    }
+    else if (key === 40){
+      this.props.moveDown()
+    }
+  }
+
+  componentWillMount() {
+    document.addEventListener('keydown', this.move, false)
+  }
+
+
   render() {
     const { isRunning, gameOver } = this.props
+
+    
 
     return (
       <div className="controls">
@@ -54,5 +80,15 @@ const mapDispatchToProps = () => {
     rotate
   }
 }
+
+// document.onkeydown = function (e) {
+//     e = e || window.event;
+//     // use e.keyCode
+//     move(e.keyCode);
+//     console.log("hi")
+// };
+
+
+
 
 export default connect(mapStateToProps, mapDispatchToProps())(Controls)
