@@ -8,7 +8,6 @@ class Controls extends Component {
 
   move = (e) => {
     const key = e.keyCode
-    console.log(key)
     if(key === 37){
 
         this.props.moveLeft()
